@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <!--
+        @todo: set menu "Webinse FAQ" -> "Questions" in backend, sort order of the menu never mind
+               "Questions" menu item must have link to backend index action of your module
+        -->
+        <add id="Webinse_FAQ6::faq" title="Webinse FAQ" module="Webinse_FAQ6"
+             sortOrder="51" resource="Webinse_FAQ6::faq"/>
+        <add id="Webinse_FAQ6::questions" title="Questions" module="Webinse_FAQ6"
+             sortOrder="10" resource="Webinse_FAQ6::questions"
+             action="webinse_faq6/question" parent="Webinse_FAQ6::faq"/>
+    </menu>
+</config>

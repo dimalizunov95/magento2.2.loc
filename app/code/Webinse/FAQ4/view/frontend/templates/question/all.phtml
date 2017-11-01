@@ -1,0 +1,52 @@
+<?php $collection = $block->getCollection() ?>
+
+<?php
+/**
+ * @todo: Add link to 'add new question' page
+ * @see \Webinse\FAQ4\Block\Question\All
+ */
+?>
+<?php if ($collection->getSize()): ?>
+    <?php
+    /**
+     * @todo Output all questions with answer and creation time.
+     *       Near each record you must add link to delete and edit it
+     * @see \Webinse\FAQ4\Block\Question\All
+     */
+    ?>
+    <a href="<?php echo $block->getAddNewUrl() ?>">New link</a>
+
+    <table border="1">
+        <thead>
+        <tr>
+            <td>question</td>
+            <td>answer</td>
+            <td>created</td>
+            <td>edit</td>
+            <td>delete</td>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($collection->getItems() as $row): ?>
+            <tr>
+                <td>
+                    <?php echo $row->getContent(); ?>
+                </td>
+                <td>
+                    <?php echo $row->getAnswer(); ?>
+                </td>
+                <td>
+                    <?php echo $row->getCreationTime(); ?>
+                </td>
+                <td>
+                    <a href="<?php echo $block->getEditUrl($row); ?>">edit</a>
+                </td>
+                <td>
+                    <a href="<?php echo $block->getDeleteUrl($row); ?>">delete</a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
+
+<?php endif; ?>

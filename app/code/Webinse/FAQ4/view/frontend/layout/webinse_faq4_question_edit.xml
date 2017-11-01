@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Layout for frontend action frontName/question/edit
+ *
+ * @category    Webinse
+ * @package     Webinse_FAQ4
+ * @author      Webinse Team <info@webinse.com>
+ * @copyright   2017 Webinse Ltd. (https://www.webinse.com)
+ * @license     http://opensource.org/licenses/OSL-3.0 The Open Software License 3.0
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <!-- @todo: Set page title "Question" -->
+        <title>Question</title>
+        <!-- @todo: include css file "css/style.css" of your module -->
+        <css src="Webinse_FAQ4::css/style.css"/>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <!-- @todo: add block that using template webinse_faq4/form.phtml -->
+            <block class="Webinse\FAQ4\Block\Question"
+                   name="faq4.question" template="question/form.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

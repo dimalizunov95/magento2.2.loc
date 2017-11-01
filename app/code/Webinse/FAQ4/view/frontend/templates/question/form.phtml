@@ -1,0 +1,49 @@
+<?php
+/**
+ * Webinse
+ *
+ * PHP Version 5.6.23
+ *
+ * @category    Webinse
+ * @package     Webinse_FAQ4
+ * @author      Webinse Team <info@webinse.com>
+ * @copyright   2017 Webinse Ltd. (https://www.webinse.com)
+ * @license     http://opensource.org/licenses/OSL-3.0 The Open Software License 3.0
+ */
+/**
+ * Template for edit and add question
+ *
+ * @category    Webinse
+ * @package     Webinse_FAQ4
+ * @author      Webinse Team <info@webinse.com>
+ * @copyright   2017 Webinse Ltd. (https://www.webinse.com)
+ * @license     http://opensource.org/licenses/OSL-3.0 The Open Software License 3.0
+ */
+/** @var \Webinse\FAQ4\Block\Question $block */
+?>
+<?php $question = $block->getQuestion() ?>
+
+<form method="post" class="faq-form" action="
+    <?php /** @todo: link to save action of controller */ /** @see \Webinse\FAQ4\Block\Question */
+    echo $block->getSaveUrl();
+    ?>">
+    <h2 class="legend">
+        <?php echo $question->getId() ? __('Edit') : __('Add new'); ?>
+    </h2>
+    <?php
+    /**
+     * @todo: complete the form using example field
+     */
+    ?>
+    <p>
+        <label for="question"><?php echo __('Question') ?></label>
+        <input id="question" name="question_field" type="text" title="<?php echo __($question->getContent()) ?>"
+               value="<?php echo $block->escapeQuote($question->getContent()) ?>" />
+    </p>
+    <p>
+        <label for="question"><?php echo __('Answer') ?></label>
+        <input id="question" name="answer_field" type="text" title="<?php echo __($question->getAnswer()) ?>"
+               value="<?php echo $block->escapeQuote($question->getAnswer()) ?>" />
+    </p>
+    <input type="submit" name="submit" title="<?php echo __('Submit') ?>" value="<?php echo __('Submit') ?>" />
+</form>

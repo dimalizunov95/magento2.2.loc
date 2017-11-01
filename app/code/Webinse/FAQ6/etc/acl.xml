@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <!-- @todo: set acl resources "Webinse_FAQ6::faq" -> "Webinse_FAQ6::questions" in backend -->
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Webinse_FAQ6::faq" title="Questions_FAQ" sortOrder="51">
+                    <resource id="Webinse_FAQ6::questions" title="Posts" sortOrder="10"/>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

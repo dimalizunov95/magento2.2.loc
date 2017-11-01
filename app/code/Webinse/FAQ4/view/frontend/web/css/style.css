@@ -1,0 +1,15 @@
+/**
+ * Styles for edit and add question
+ *
+ * @category    Webinse
+ * @package     Webinse_FAQ4
+ * @author      Webinse Team <info@webinse.com>
+ * @copyright   2017 Webinse Ltd. (https://www.webinse.com)
+ * @license     http://opensource.org/licenses/OSL-3.0 The Open Software License 3.0
+ */
+
+.faq-form input[type="submit"] {
+    padding: 5px 15px;
+}
+
+/* @todo: add some style to your form */

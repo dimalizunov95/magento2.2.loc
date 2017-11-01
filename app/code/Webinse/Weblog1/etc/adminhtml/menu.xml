@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+
+
+
+
+        <add id="Webinse_Weblog1::weblog" title="Weblog" module="Webinse_Weblog1"
+             sortOrder="51" resource="Webinse_Weblog1::weblog"/>
+        <add id="Webinse_Weblog::blogpost_grid" title="Posts" module="Webinse_Weblog"
+             sortOrder="10" resource="Webinse_Weblog::blogpost"
+             action="webinse_weblog1/blogpost" parent="Webinse_Weblog1::weblog"/>
+    </menu>
+</config>

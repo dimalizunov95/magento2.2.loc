@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Webinse_Helloworld::helloworld" title="Hello World" module="Webinse_Helloworld" sortOrder="51" resource="Webinse_Helloworld::helloworld"/>
+        <add id="Webinse_Helloworld::post" title="Posts" module="Webinse_Helloworld" sortOrder="10" action="Webinse_Helloworld/post" resource="Webinse_Helloworld::post" parent="Webinse_Helloworld::helloworld"/>
+        <add id="Webinse_Helloworld::hello_configuration" title="Configuration" module="Webinse_Helloworld" sortOrder="99" parent="Webinse_Helloworld::helloworld" action="adminhtml/system_config/edit/section/helloworld" resource="Webinse_Helloworld::helloworld_configuration"/>
+    </menu>
+</config>
